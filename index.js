@@ -87,6 +87,7 @@ require(["js/config.js"], function() {
 
             // ======================================
             //实时获取地理坐标位置
+            var cityName;
             navigator.geolocation.getCurrentPosition(
                 // 成功
                 (ev) => {
@@ -98,7 +99,7 @@ require(["js/config.js"], function() {
                     // map.centerAndZoom(point, 12);
 
                     function myFun(result) {
-                        var cityName = result.name;
+                        cityName = result.name;
                         // map.setCenter(cityName);
                         // alert("当前定位城市:" + cityName);
                         weather(cityName)
@@ -108,7 +109,8 @@ require(["js/config.js"], function() {
                 },
                 // 失败
                 (error) => {
-                    console.log(error)
+                    cityName = `上海`;
+                    weather(cityName)
                 }
             )
 
