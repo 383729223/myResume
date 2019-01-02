@@ -95,7 +95,7 @@ require(["js/config.js"], function() {
                     // alert("经度",ev.coords.longitude,"纬度",ev.coords.latitude)
                     // alert("经度",ev.)
                     // var map = new BMap.Map("allmap");
-                    var point = new BMap.Point(ev.coords.longitude, ev.coords.latitude);
+                    // var point = new BMap.Point(ev.coords.longitude, ev.coords.latitude);
                     // map.centerAndZoom(point, 12);
 
                     function myFun(result) {
